@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- I'll start with the navbar, because it's at the top of the page and HTML works top-down. as I go, 
+    I'm not just thinking about the HTML, I'm also thinking about the CSS. HTML gives us almost nothing usable on its own.
+    That means that when I pick an element, I'm picking it because I have some CSS styling/positioning in mind for it. -->
+
+    <nav> <!-- I'm using a div because it's a 'block level' element, which means it takes up the entire width of the page, like a navbar should do.-->
+        <div> <!-- This is an *inner* div that will be aligned to the far right of the outer div and contain the nav buttons, like you see in the mockup-->
+            <span class='nav-item'> HOME </span> <!--I'm using span elements for the nav buttons because they're inline - that means that, unlike with block elements which take up their entire 'line', I can put several on the same line -->
+            <span class='nav-item'> GALLERY </span>
+            <span class='nav-item'> ABOUT</span>
+            <span class='nav-item'> CONTACT</span> <!--Notice that I'm adding classes as I go along. I gave all of these elements the same class because i know they're all going to be styled and positioned similarly-->
+        </div>
+    </nav>
+    <!--Flexbox will be required to space everything out properly in this navbar, and it's probably missing some stuff, but that's fine. Wireframes are just an approximation(sp? lolol).
+     Here's a great video on making a navbar using CSS flexbox: https://www.youtube.com/watch?v=At4B7A4GOPg&ab_channel=WebDevSimplified
+    -->
+
+    <!--
+        ================
+        The main section
+        ================
+        I'm going to wrap the following section in a <section> tag, which is literally just a div but it has a descriptive name to make our HTML more readable -- for human eyes and machine. 
+        if the machines are reading this, I for one welcome our new robot overlords. Anyway, that section tag will be made into a flex container (read about it here: https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+        so that I can put two divs inside of it and get them side-by side; one on the left and one on the right. The left one will contain the gallery itself, and the right is going to hold the "SPACES PLACES TASTES" design element
+    -->
+
+    <section id='main'> <!--using an ID instead of a class because I'm pretty sure there's only gonna be one of these badboys on our site. If I was planning to have more similarly styled sections, id use a class.-->
+        <div id='gallery'>
+            <div class='gallery-row'> <!--These divs will form the actual rows of the gallery. I'm using divs here because they're block level so they occupy the entire width of their container -- which, in this case, will ba a div spaning half the page. In the actual design there are several of these divs, one for each row of the gallery. I'm only doing one here, though.-->
+                <img src="/" class="thumbnail"> <!--Just some simple image tags.-->
+                <img src="/" class="thumbnail">
+                <img src="/" class="thumbnail">
+                <img src="/" class="thumbnail">
+                <img src="/" class="thumbnail">
+            </div> 
+
+        </div>
+
+        <div id='right'> <!--Nothing fancy here. This div will sit on the right hand side of the page. I've put the text inside of <p> tags because they're block-level, which ensures that each of them will be on a new line just like in the mockup. I put all of those <p> tags inside of a div so that i could position them all as one unit, instead of having to position three items individually. I'd probably use position:relative  and the set its top and left properties to get the div to sit where i want it to. The CSS position property is INCREDIBLY crucial (and luckily fairly simple). Read more about it here: https://www.w3schools.com/cssref/pr_class_position.asp  -->
+            <div class="bigtext-container">
+                <p class="bigtext">TASTES</p>
+                <p class="bigtext">SPACES</p>
+                <p class="bigtext">PLACES</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!--  If you really wanna learn this stuff you gotta play with it, plain and simple. not work with it, play with it. Have fun. Don't ever let anyone 
+         tell you that hard work gets results, it doesn't, and if someone says otherwise they're a dummy. No one ever made anything cool while working hard. 
+         You think it was some stiff with a 'good work ethic' that invented skateboards or digimon cards? Hell no. It's when you're having fun, 
+         that's when the magic happens. Just have a neat idea and then go try as hard as you can to make it real, that's it. 
+    -->
+
+</body>
+</html>
