@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #37353C;
+}
+
+.header {
+    position: relative;
+    top: 40vh;
+    color: #fff;
+    font-size: 30px;
+    font-family: Anton;
+    border-bottom: 1px solid white;
+    width: 70vw;
+}
+
+h1 {
+    margin: none;
+}
